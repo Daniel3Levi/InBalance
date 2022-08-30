@@ -1,0 +1,67 @@
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(https://wallpaperaccess.com/full/1191993.jpg);
+  background-size: cover;
+}
+
+.loginTitle {
+  font-family: 'Rubik', sans-serif;
+  font-size: 60px;
+}
+
+.loginForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginForm > label {
+  font-family: 'Rubik', sans-serif;
+
+  margin: 15px 0;
+}
+
+.loginForm > input {
+  padding: 15px;
+  border-radius: 15px;
+  font-family: 'Rubik', sans-serif;
+
+  background-color: white;
+  border: none;
+}
+
+.loginButton {
+  font-family: 'Rubik', sans-serif;
+  margin-top: 25px;
+  cursor: pointer;
+  background-color: teal;
+  border: none;
+  color: white;
+  font-size: large;
+  padding: 15px;
+
+  border-radius: 15px;
+}
+
+.loginRegisterButton {
+  font-family: 'Rubik', sans-serif;
+  margin-top: 25px;
+  padding: 15px;
+  font-size: large;
+  position: absolute;
+  cursor: pointer;
+  background-color: teal;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  top: 60px;
+  right: 20px;
+}

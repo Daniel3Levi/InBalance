@@ -43,8 +43,10 @@
 }
 
 .topListItem {
+  color: rgb(53, 51, 51);
+
   margin-right: 20px;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 300;
   cursor: pointer;
 }

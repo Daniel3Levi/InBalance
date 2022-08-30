@@ -1,0 +1,67 @@
+.register {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(https://img.freepik.com/free-photo/young-woman-practising-yoga-home-mat_1303-27220.jpg?w=1800&t=st=1661845218~exp=1661845818~hmac=4961072692226b0f06bacec01a5621cdab4c99923bf54f53eadfa14b64ff1e50);
+  background-size: cover;
+}
+
+.registerTitle {
+  font-family: 'Rubik', sans-serif;
+  font-size: 60px;
+}
+
+.registerForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm > label {
+  font-family: 'Rubik', sans-serif;
+
+  margin: 15px 0;
+}
+
+.registerForm > input {
+  padding: 15px;
+  border-radius: 15px;
+  font-family: 'Rubik', sans-serif;
+
+  background-color: white;
+  border: none;
+}
+
+.registerButton {
+  font-family: 'Rubik', sans-serif;
+  margin-top: 25px;
+  cursor: pointer;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  font-size: large;
+  padding: 15px;
+
+  border-radius: 15px;
+}
+
+.registerLoginButton {
+  font-family: 'Rubik', sans-serif;
+  margin-top: 25px;
+  padding: 15px;
+  font-size: large;
+  position: absolute;
+  cursor: pointer;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  top: 60px;
+  right: 20px;
+}
