@@ -32,8 +32,13 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">עקבו אחריי</span>
         <div className="sidebarSocial">
-          <i className="sidebarIcon fa-brands fa-square-facebook"></i>
-          <i className="sidebarIcon fa-brands fa-square-instagram"></i>
+          <a href="https://www.facebook.com/inbal.wolfson">
+            <i className="sidebarIcon fa-brands fa-square-facebook"></i>
+          </a>
+
+          <a href="https://instagram.com/inbalwolfson?igshid=YmMyMTA2M2Y=">
+            <i className="sidebarIcon fa-brands fa-square-instagram"></i>
+          </a>
         </div>
       </div>
     </div>

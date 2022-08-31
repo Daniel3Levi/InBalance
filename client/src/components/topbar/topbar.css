@@ -56,3 +56,9 @@
   color: #666;
   cursor: pointer;
 }
+
+.topWriteIcon {
+  font-size: 30px;
+  color: rgb(12, 148, 21);
+  cursor: pointer;
+}

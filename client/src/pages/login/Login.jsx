@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../login/login.css';
 
 export default function Login() {
@@ -12,7 +13,11 @@ export default function Login() {
         <input type="text" placeholder="******" />
         <button className="loginButton">התחברות</button>
       </form>
-      <button className="loginRegisterButton">יצירת מנוי חדש</button>
+      <button className="loginRegisterButton">
+        <Link className="link" to="/register">
+          יצירת מנוי חדש
+        </Link>
+      </button>
     </div>
   );
 }
