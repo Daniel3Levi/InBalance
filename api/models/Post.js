@@ -22,15 +22,14 @@ const PostSchema = new mongoose.Schema(
     phoneNumber: {
       type: String,
       required: true,
-      uniq: true,
-    },
-    isAdmin: {
-      type: Boolean,
-      defau,
     },
     categories: {
       type: Array,
       required: false,
+    },
+    postType: {
+      type: String,
+      required: true,
     },
   },
   { timestamps: true }

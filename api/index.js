@@ -1,9 +1,13 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 5555;
+const PORT = process.env.PORT || 5001;
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const authRoute = require('./routes/auth');
+const usersRouter = require('./routes/users');
+const postsRouter = require('./routes/posts');
+const categoriesRouter = require('./routes/categories');
+
 dotenv.config();
 app.use(express.json());
 mongoose
@@ -17,5 +21,8 @@ mongoose
 // });
 
 app.use('/api/v1/auth', authRoute);
+app.use('/api/v1/users', usersRouter);
+app.use('/api/v1/posts', postsRouter);
+app.use('/api/v1/categories', categoriesRouter);
 
 app.listen(PORT, () => console.log('listening on port ' + PORT));

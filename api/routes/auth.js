@@ -21,6 +21,24 @@ router.post('/register', async (req, res) => {
     res.status(500).json(err);
   }
 });
-//Login
 
+//Login
+router.post('/login', async (req, res) => {
+  try {
+    // BUG - NEED TO BE FIX - https://bobbyhadz.com/blog/javascript-error-cannot-set-headers-after-they-are-sent-to-client
+    const user = await User.findOne({ phoneNumber: req.body.phoneNumber });
+
+    !user && res.status(400).json('מידע שגוי');
+
+    const validated = await bcrypt.compare(req.body.password, user.password);
+
+    !validated && res.status(400).json('מידע שגוי');
+
+    const { password, ...others } = user._doc;
+
+    res.status(200).json(others);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
 module.exports = router;
