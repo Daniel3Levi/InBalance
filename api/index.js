@@ -16,13 +16,14 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-// app.use('/', (req, res) => {
-//   res.send('main url');
-// });
 
 app.use('/api/v1/auth', authRoute);
 app.use('/api/v1/users', usersRouter);
 app.use('/api/v1/posts', postsRouter);
 app.use('/api/v1/categories', categoriesRouter);
 
+app.use('/', (req, res) => {
+  res.send('InBalance API root url');
+  x;
+});
 app.listen(PORT, () => console.log('listening on port ' + PORT));
