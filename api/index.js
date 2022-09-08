@@ -24,6 +24,5 @@ app.use('/api/v1/categories', categoriesRouter);
 
 app.use('/', (req, res) => {
   res.send('InBalance API root url');
-  x;
 });
 app.listen(PORT, () => console.log('listening on port ' + PORT));

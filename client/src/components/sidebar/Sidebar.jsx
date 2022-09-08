@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import './sidebar.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Sidebar() {
   const [categories, setCategories] = useState([]);
@@ -40,21 +41,26 @@ export default function Sidebar() {
         <span className="sidebarTitle">קטגוריות</span>
         <ul className="sidebarList">
           {categories.map((category) => (
-            <li key={category._id} className="sidebarListItem">
-              {category.name}
-            </li>
+            <Link className="link" to={`/?categories=${category.name}`}>
+              <li key={category._id} className="sidebarListItem">
+                {category.name}
+              </li>
+            </Link>
           ))}
         </ul>
       </div>
       <div className="sidebarItem">
         <span className="sidebarTitle">עקבו אחריי</span>
         <div className="sidebarSocial">
-          <a href="https://www.facebook.com/inbal.wolfson">
+          <a className="link" href="https://www.facebook.com/inbal.wolfson">
             <i className="sidebarIcon fa-brands fa-square-facebook"></i>
           </a>
 
-          <a href="https://instagram.com/inbalwolfson?igshid=YmMyMTA2M2Y=">
-            <i className="sidebarIcon fa-brands fa-square-instagram"></i>
+          <a
+            className="link"
+            href="https://instagram.com/inbalwolfson?igshid=YmMyMTA2M2Y="
+          >
+            <i className="link sidebarIcon fa-brands fa-square-instagram"></i>
           </a>
         </div>
       </div>

@@ -7,8 +7,8 @@ export default function Login() {
     <div className="login">
       <span className="loginTitle">התחברות</span>
       <form action="submit" className="loginForm">
-        <label>אימייל</label>
-        <input type="text" placeholder="Inbal@InBalance.co.il" />
+        <label>מס׳ נייד</label>
+        <input type="text" placeholder="0542456747" />
         <label>סיסמא</label>
         <input type="text" placeholder="******" />
         <button className="loginButton">התחברות</button>

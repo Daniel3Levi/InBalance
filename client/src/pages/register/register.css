@@ -65,3 +65,10 @@
   top: 60px;
   right: 20px;
 }
+
+.errorMsg {
+  color: red;
+  margin: 10px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+}

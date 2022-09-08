@@ -69,16 +69,16 @@ router.get('/post/:id', async (req, res) => {
 // Get all Posts && filters type,category, user
 router.get('/filter', async (req, res) => {
   const postType = req.query.postType;
-  const catName = req.query.categories;
+  const categories = req.query.categories;
   const phoneNumber = req.query.phoneNumber;
   try {
     let posts;
     if (phoneNumber) {
       posts = await Post.find({ phoneNumber });
-    } else if (catName) {
+    } else if (categories) {
       posts = await Post.find({
         categories: {
-          $in: [catName],
+          $in: [categories],
         },
       });
     } else if (postType) {
